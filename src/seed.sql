@@ -18,6 +18,11 @@ DROP DATABASE IF EXISTS movie_app;
  CREATE TABLE ratings (
      id SERIAL PRIMARY KEY,
      stars INT NULL,
+     movie_ INT REFERENCES movies(id)
+ );
+
+ CREATE TABLE comments(
+     id SERIAL PRIMARY KEY,
      
  )
 
