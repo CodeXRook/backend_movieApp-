@@ -5,6 +5,7 @@ DROP DATABASE IF EXISTS movie_app;
 
  CREATE TABLE movies (
      id SERIAL PRIMARY KEY,
+     title VARCHAR NOT NULL,
      stars INT NULL,
      genres_id INT UNIQUE NOT NULL,
      img_url VARCHAR NOT NULL
@@ -18,7 +19,7 @@ DROP DATABASE IF EXISTS movie_app;
  CREATE TABLE ratings (
      id SERIAL PRIMARY KEY,
      stars INT NULL,
-     movies_ INT REFERENCES movies(id)
+     movies_id INT REFERENCES movies(id)
  );
 
  CREATE TABLE comments(
@@ -27,16 +28,16 @@ DROP DATABASE IF EXISTS movie_app;
      movies_id INT REFERENCES movies(id) NOT NULL
  );
 
-INSERT INTO movies (id, title, genres_id) VALUES
-(34, 'The Matrix', 'Action');
+INSERT INTO movies(id, title, stars, genres_id, img_url) VALUES
+(34, 'The Matrix', 5,'Action', URL);
 
-INSERT INTO genres ( id, name) VALUES
+INSERT INTO genres(id, name) VALUES
 (12,'Action');
 
-INSERT INTO ratings ( id, stars, movies_id) VALUES
+INSERT INTO ratings(id, stars, movies_id) VALUES
 ( 2, 5, 34);
 
-INSERT INTO comments( id, text, movies_id) VALUES
+INSERT INTO comments(id, text, movies_id) VALUES
 ( 5,'BEST MOVIE EVER', 34);
 
 
