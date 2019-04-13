@@ -1,11 +1,13 @@
 DROP DATABASE IF EXISTS movie_app;
  CREATE DATABASE movie_app;
 
- CREATE TABLE Movies (
+ \c movie_app;
+
+ CREATE TABLE movies (
      id SERIAL PRIMARY KEY,
-
+     stars INT NULL,
  )
 
- CREATE TABLE Genres (
-     id 
- )
+
+
+
