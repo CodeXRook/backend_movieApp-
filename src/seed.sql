@@ -27,6 +27,7 @@ DROP DATABASE IF EXISTS movie_app;
      movie_id INT REFERENCES movies(id) NOT NULL
  );
 
+INSERT INTO movies(id, title, genre_id) VALUES
 
 
 
