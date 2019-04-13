@@ -15,6 +15,8 @@ DROP DATABASE IF EXISTS movie_app;
      name VARCHAR NOT NULL
  );
 
+ CREATE TABLE ratings ()
+
 
 
 
