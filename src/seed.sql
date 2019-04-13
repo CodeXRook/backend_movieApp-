@@ -30,6 +30,11 @@ DROP DATABASE IF EXISTS movie_app;
 INSERT INTO movies (id, title, genre_id) VALUES
 (' ', ' ', ' ');
 
+INSERT INTO genres ( id, name) VALUES
+(' ',' ');
+
+
+
 
 
 
