@@ -12,7 +12,8 @@ DROP DATABASE IF EXISTS movie_app;
 
  CREATE TABLE genres(
      id INT REFERENCES genre(id) NOT NULL,
- )
+     name VARCHAR NOT NULL
+ );
 
 
 
