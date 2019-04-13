@@ -6,6 +6,7 @@ DROP DATABASE IF EXISTS movie_app;
  CREATE TABLE movies (
      id SERIAL PRIMARY KEY,
      stars INT NULL,
+     genre_id INT UNIQUE NOT NULL,
  )
 
 
