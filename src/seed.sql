@@ -23,8 +23,9 @@ DROP DATABASE IF EXISTS movie_app;
 
  CREATE TABLE comments(
      id SERIAL PRIMARY KEY,
-     
- )
+     text VARCHAR NOT NULL,
+     movie_id INT REFERENCES movies(id) NOT NULL
+ );
 
 
 
