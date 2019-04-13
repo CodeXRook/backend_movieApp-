@@ -33,7 +33,8 @@ INSERT INTO movies (id, title, genre_id) VALUES
 INSERT INTO genres ( id, name) VALUES
 (' ',' ');
 
-
+INSERT INTO ratings ( id, stars, movie_id) VALUES
+(' ', ' ', ' ');
 
 
 
