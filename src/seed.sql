@@ -10,7 +10,9 @@ DROP DATABASE IF EXISTS movie_app;
      img_url VARCHAR NOT NULL
  );
 
- CREATE TABLE genres()
+ CREATE TABLE genres(
+     id INT REFERENCES genre(id) NOT NULL,
+ )
 
 
 
