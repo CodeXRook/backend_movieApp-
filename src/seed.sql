@@ -7,7 +7,8 @@ DROP DATABASE IF EXISTS movie_app;
      id SERIAL PRIMARY KEY,
      stars INT NULL,
      genre_id INT UNIQUE NOT NULL,
- )
+     img_url VARCHAR NOT NULL
+ );
 
 
 
