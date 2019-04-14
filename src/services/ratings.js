@@ -37,3 +37,12 @@ RatingService.update = ( id, stars, movie_id) => {
     `;
     return db.one(sql, {id, stars, movies_id});
 };
+
+//DELETE
+RatingService.delete = (id) => {
+    const sql = `
+    DELETE FROM
+    ratings
+    WHERE
+    `;
+};
