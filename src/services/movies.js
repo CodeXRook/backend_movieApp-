@@ -6,5 +6,7 @@ MovieService.create = (title, genre_id, img_url) => {
         INSERT INTO 
         movies ( title, genre_id, img_url)
         VALUES
+        ($[title], $[genre_id], $[img_url])
+        RETURNING id;
     `;
 }
