@@ -40,5 +40,7 @@ CommentService.update = (id, text, movie_id) => {
 
 //DELETE
 CommentService.delete = (id) => {
+    const sql = `
     
-}
+    `;
+};
