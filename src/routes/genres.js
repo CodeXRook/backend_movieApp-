@@ -10,4 +10,8 @@ genreRouter.get('/:id', (req, res, nexdt) => {
     .then(data => {
         res.json(data);
     })
-})
+    .catch(err => {
+        next(err);
+    });
+});
+
