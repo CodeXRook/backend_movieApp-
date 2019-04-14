@@ -17,6 +17,9 @@ genreRouter.get('/:id', (req, res, nexdt) => {
 
 //CREATE GENRE
 genreRouter.post('/', (req, res, next) => {
+    const { name } =res.body;
+
+    MovieService.create(name)
     
-}
+});
 
