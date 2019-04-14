@@ -36,5 +36,8 @@ movieRouter.get('/:id',(req, res, next) =>{
     .then(data => {
         releaseEvents.json(data);
     })
-}
+    .catch(err => {
+        next(err);
+      });
+});
 
