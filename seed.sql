@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS movie_app;
  \c movie_app;
 
  CREATE TABLE movies (
- id SERIAL PRIMARY KEY,
+ id SERIAL PRIMARY KEY NOT NULL,
  title VARCHAR NOT NULL,
  stars INT NULL,
  genre_id INT UNIQUE NOT NULL,
