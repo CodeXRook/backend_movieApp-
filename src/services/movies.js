@@ -40,3 +40,9 @@ MovieService.update = (id, title, genre_id, img_url) => {
     return db.none(sql, {id, title, genre_id, img_url });
 };
 
+//DELETE
+MovieService.delete = (id) => {
+    const sql = `
+
+    `;
+};
