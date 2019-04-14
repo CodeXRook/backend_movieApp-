@@ -10,3 +10,5 @@ router.use('/movies', require('./movies'));
 router.use('/ratings', require('./ratings'));
 router.use('/genres', require('./genres'));
 router.use('/comments', require('./comments'));
+
+module.eports = router;
