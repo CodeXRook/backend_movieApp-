@@ -51,10 +51,12 @@ MovieService.delete = (id) => {
     return db.none(sql, { id });
 };
 
-MovieService.getMovieOrders = (id) => {
-    const sql = `
-      SELECT 
-      orders.*
-      FROM 
-    `;
-};
+// MovieService.getMovieOrders = (id) => {
+//     const sql = `
+//       SELECT 
+//       orders.*
+//       FROM 
+//     `;
+// };
+
+module.exports = MovieService;
