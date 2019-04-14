@@ -56,3 +56,4 @@ genreRouter.delete('/:id', (req, res, next)=> {
     });
 });
 
+module.exports = genreRouter;
