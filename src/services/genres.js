@@ -1,7 +1,7 @@
 const { db } = require('./dbConnect');
 const GenreService = {};
 
-//CREATE
+//READ
 GenreService.read = (id) => {
     const sql = `
     SELECT *
@@ -11,3 +11,9 @@ GenreService.read = (id) => {
     `;
     return db.one(sql, { id });
 };
+
+//CREATE
+GenreService.create = (name) => {
+    const sql = `
+    `
+}
