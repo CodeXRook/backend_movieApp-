@@ -35,5 +35,5 @@ RatingService.update = ( id, stars, movie_id) => {
     WHERE
     ratings.id =$[id]
     `;
-    
+    return db.one(sql, {id, stars, movies_id});
 };
