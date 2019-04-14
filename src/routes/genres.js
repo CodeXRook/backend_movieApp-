@@ -19,13 +19,17 @@ genreRouter.get('/:id', (req, res, nexdt) => {
 genreRouter.post('/', (req, res, next) => {
     const { name } =res.body;
 
-    MovieService.create(name)
+    GenreService.create(name)
     .then(data =>{
         res,json(`Success: Product created with id: ${data.id}`); 
     })
     .catch(err =>{
         next(err);
-    })
-
+    });
 });
 
+
+//UPDATE GENRE
+genreRouter.put('/:id', (req, res, next) => {
+
+})
