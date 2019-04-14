@@ -61,4 +61,12 @@ movieRouter.delete('./:id', (res, res, next)=> {
     const { id } = req.params;
 
     MovieService.delete(id)
+    .then(() =>{
+       res.json("Success: Your Movie has been deleted");
+    })
+    .catch(err => {
+        next(err);
+    })
 });
+
+module.exports = movieRouter;
