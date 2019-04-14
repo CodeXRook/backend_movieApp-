@@ -36,3 +36,16 @@ GenreService.update = (id, name) => {
     `;
     return db.none(sql, {id, name});
 };
+
+//DELETE
+GenreService.delete = (id) => {
+    const sql = `
+    DELETE FROM
+    genres
+    WHERE
+    id = $[id]
+    `;
+    return db.none(sql, { id });
+};
+
+module.exports = GenreService;
