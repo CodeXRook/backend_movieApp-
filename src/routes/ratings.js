@@ -12,5 +12,10 @@ ratingRouter.get('/:id', (req, res, next)=>{
     })
     .catch(err => {
         next(err);
-    })
+    });
+});
+
+//CREATE RATING
+ratingRouter.post('/', (req, res, next) => {
+
 })
