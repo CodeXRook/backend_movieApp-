@@ -49,6 +49,9 @@ commentRouter.delete('/:id', (req, res, next) => {
 
     CommentService.delete(id)
     .then(() => {
-    
+        res.json("Success: Comment deleted");
+     })
+     .catch(err => {
+         next(err);
      })
 });
