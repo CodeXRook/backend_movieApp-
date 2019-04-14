@@ -58,5 +58,6 @@ moiveRouter.put('/:id', (req, res, next) =>{
 
 //DELET MOVIE
 movieRouter.delete('./:id', (res, res, next)=> {
+    const { id } = req.params;
 
 });
