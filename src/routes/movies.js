@@ -18,5 +18,7 @@ movieRouter.post('/', (req, res, next) =>{
 
 //GET MOVIE INFO
 movieRouter.get('./:id', (req, res, next) =>{
-    
+    const { id } = req.params;
+
+    MovieService.read(id)
 })
