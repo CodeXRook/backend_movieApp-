@@ -4,19 +4,19 @@ DROP DATABASE IF EXISTS movie_app;
  \c movie_app;
 
  CREATE TABLE movies (
-     id SERIAL PRIMARY KEY,
-     title VARCHAR NOT NULL,
-     stars INT NULL,
-     genres_id INT UNIQUE NOT NULL,
-     img_url VARCHAR NOT NULL
+ id SERIAL PRIMARY KEY,
+ title VARCHAR NOT NULL,
+ stars INT NULL,
+ genre_id INT UNIQUE NOT NULL,
+ img_url VARCHAR NOT NULL
  );
 
  CREATE TABLE genres(
-     id INT REFERENCES genres(id) NOT NULL,
+     id INT REFERENCES movies(genre_id),
      name VARCHAR NOT NULL
  );
 
- CREATE TABLE ratings (
+ CREATE TABLE ratings(
      id SERIAL PRIMARY KEY,
      stars INT NULL,
      movies_id INT REFERENCES movies(id)
@@ -29,7 +29,7 @@ DROP DATABASE IF EXISTS movie_app;
  );
 
 INSERT INTO movies(id, title, stars, genres_id, img_url) VALUES
-(34, 'The Matrix', 5,'Action', URL);
+(34, 'The Matrix', 5,'Action', ' ');
 
 INSERT INTO genres(id, name) VALUES
 (12,'Action');
