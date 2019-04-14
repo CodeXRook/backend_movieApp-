@@ -23,4 +23,7 @@ commentRouter.post('/', (req, res, next)=>{
     .then(data => {
     res.json(`Success: Comment created with id: ${data.id}`);
     })
-})
+    .catch(err => {
+        next(err);
+    })
+});
