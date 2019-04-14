@@ -20,6 +20,9 @@ genreRouter.post('/', (req, res, next) => {
     const { name } =res.body;
 
     MovieService.create(name)
-    
+    .then(data =>{
+        res,json(`Success: Product created with id: ${data.id}`); 
+    })
+
 });
 
