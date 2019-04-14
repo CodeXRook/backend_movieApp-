@@ -44,5 +44,7 @@ RatingService.delete = (id) => {
     DELETE FROM
     ratings
     WHERE
+    id = $[id]
     `;
+   
 };
