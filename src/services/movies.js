@@ -1,6 +1,7 @@
 const { db } =require('./dbConnect');
 const MovieService = {};
 
+//CREATE
 MovieService.create = (title, genre_id, img_url) => {
     const sql = `
         INSERT INTO 
@@ -12,7 +13,8 @@ MovieService.create = (title, genre_id, img_url) => {
     return db.one(sql, { title, genre_id, img_url});
 };
 
-UserService.read = (id) => {
+//READ
+MovieService.read = (id) => {
     const sql = `
         SELECT *
         FROM 
@@ -22,3 +24,16 @@ UserService.read = (id) => {
     `;
     return db.one(sql, { id });
 };
+
+//UPDATE
+MovieService.update = (id, title, genre_id, img_url) => {
+    const sql = `
+      UPDATE 
+      movies
+      SET
+      title = $[title],
+      genre_id = $[genre_id],
+      img_url = $[img_url]   
+    `;
+}
+
