@@ -27,3 +27,8 @@ commentRouter.post('/', (req, res, next)=>{
         next(err);
     });
 });
+
+// Update Comment
+commentRouter.put('/:id', (req, res, next)=> {
+    
+})
