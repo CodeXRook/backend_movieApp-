@@ -6,5 +6,5 @@ const RatingService = require('../services/ratings');
 ratingRouter.get('/:id', (req, res, next)=>{
     const { id } = req.params;
 
-    
+    RatingService.read(id)
 })
