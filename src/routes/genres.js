@@ -44,4 +44,6 @@ genreRouter.put('/:id', (req, res, next) => {
 });
 
 // Delete Genre
-genreRouter.delete('/:id', (req, res, next)
+genreRouter.delete('/:id', (req, res, next)=> {
+    const { id } = req.params;
+});
