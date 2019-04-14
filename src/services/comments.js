@@ -44,6 +44,6 @@ CommentService.delete = (id) => {
     DELETE FROM
     comments
     WHERE
-    
+    id = $[id]
     `;
 };
