@@ -15,5 +15,11 @@ GenreService.read = (id) => {
 //CREATE
 GenreService.create = (name) => {
     const sql = `
-    `
-}
+    INSET INTO 
+    genres (name)
+    VALUE
+    ($[name])
+    RETURNING id
+    `;
+    return db.one(sql, { name });
+};
