@@ -14,3 +14,9 @@ movieRouter.post('/', (req, res, next) =>{
             next(err);
         });
 });
+
+
+//GET MOVIE INFO
+movieRouter.get('./:id', (req, res, next) =>{
+    
+})
