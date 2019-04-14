@@ -3,7 +3,7 @@ const genreRouter = express.Router();
 const GenreService = require('../services/genres');
 
 // GET GENRE
-genreRouter.get('/:id', (req, res, nexdt) => {
+genreRouter.get('/', (req, res, next) => {
     const { id } = req.params;
 
     GenreService.read(id)
@@ -21,7 +21,7 @@ genreRouter.post('/', (req, res, next) => {
 
     GenreService.create(name)
     .then(data =>{
-        res,json(`Success: Product created with id: ${data.id}`); 
+        res.json(`Success: Product created with id: ${data.id}`); 
     })
     .catch(err =>{
         next(err);
