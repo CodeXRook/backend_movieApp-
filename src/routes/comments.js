@@ -8,6 +8,14 @@ commentRouter.get('/:id', (req, res, next)=> {
 
     CommentService.read(id)
     .then(data => {
-        
+       res.json(data);
     })
+    .catch(err => {
+        next(err);
+    });
+});
+
+//CREATE COMMENT
+commentRouter.post('/', (req, res, next)=>{
+    
 })
