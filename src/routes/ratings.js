@@ -21,6 +21,6 @@ ratingRouter.post('/', (req, res, next) => {
 
     RatingService.create(stars, movie_id)
     .then(data => {
-        
+        res.json(`Success: Rating created with id: ${data.id}`);
     })
 });
