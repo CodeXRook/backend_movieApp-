@@ -4,5 +4,9 @@ const CommentService = {};
 //READ
 CommentService.read = (id) => {
     const sql = `
-    `
-}
+    SELECT *
+    FROM comments
+    WHERE
+    comments.id = $[id]
+    `;
+};
