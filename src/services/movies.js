@@ -9,4 +9,6 @@ MovieService.create = (title, genre_id, img_url) => {
         ($[title], $[genre_id], $[img_url])
         RETURNING id;
     `;
-}
+    return db.one(sql, { title, genre_id, img_url});
+};
+
