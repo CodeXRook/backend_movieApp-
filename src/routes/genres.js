@@ -15,3 +15,8 @@ genreRouter.get('/:id', (req, res, nexdt) => {
     });
 });
 
+//CREATE GENRE
+genreRouter.post('/', (req, res, next) => {
+    
+}
+
