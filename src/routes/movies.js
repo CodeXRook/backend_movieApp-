@@ -51,4 +51,7 @@ moiveRouter.put('/:id', (req, res, next) =>{
   .then(() =>{
     res.json('Success: Movie has been updated');
   })
+  .catch(err => {
+      next(err);
+  })
 });
