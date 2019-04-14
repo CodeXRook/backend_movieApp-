@@ -21,4 +21,5 @@ CommentService.create = (text, movie_id) => {
     ($[text] $[movie_id])
     RETURNING id
     `;
+    return db.one(sql, { text, movie_id});
 };
