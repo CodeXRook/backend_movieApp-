@@ -38,4 +38,7 @@ genreRouter.put('/:id', (req, res, next) => {
     .then(()=>{
         res.json("Success: Genre updated");
     })
+    .catch(err => {
+        
+    })
 })
