@@ -21,4 +21,8 @@ movieRouter.get('./:id', (req, res, next) =>{
     const { id } = req.params;
 
     MovieService.read(id)
+    .then(data => {
+        res.json(data);
+    })
+    
 })
