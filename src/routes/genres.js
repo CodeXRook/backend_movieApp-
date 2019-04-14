@@ -51,4 +51,7 @@ genreRouter.delete('/:id', (req, res, next)=> {
     .then(()=>{
         res.json("Success: Genre deleted");
     })
+    .catch(err => {
+        
+    })
 });
