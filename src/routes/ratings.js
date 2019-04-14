@@ -55,4 +55,4 @@ ratingRouter.delete('/:id', (req, res, next) =>{
     });
 });
 
-
+module.exports = ratingRouter;
