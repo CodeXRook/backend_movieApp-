@@ -20,4 +20,5 @@ UserService.read = (id) => {
         WHERE
         movies.id = $[id]
     `;
-}
+    return db.one(sql, { id });
+};
