@@ -20,4 +20,7 @@ ratingRouter.post('/', (req, res, next) => {
     const {stars, movie_id} =res.body;
 
     RatingService.create(stars, movie_id)
+    .then(data => {
+        
+    })
 });
