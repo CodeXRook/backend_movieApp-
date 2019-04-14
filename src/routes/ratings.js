@@ -10,4 +10,7 @@ ratingRouter.get('/:id', (req, res, next)=>{
     .then(data => {
         res.json(data);
     })
+    .catch(err => {
+        next(err);
+    })
 })
