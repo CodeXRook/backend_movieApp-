@@ -12,3 +12,6 @@ MovieService.create = (title, genre_id, img_url) => {
     return db.one(sql, { title, genre_id, img_url});
 };
 
+UserService.read = (id) => {
+    const sql = 
+}
