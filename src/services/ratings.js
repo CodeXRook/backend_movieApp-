@@ -9,5 +9,5 @@ RatingService.read = (id) => {
       WHERE
       ratings.id = $[id]   
     `;
-    
+    return db.one(sql, {id});
 };
