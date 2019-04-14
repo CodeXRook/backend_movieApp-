@@ -9,3 +9,4 @@ router.get('/', (req, res, next) =>{
 router.use('/movies', require('./movies'));
 router.use('/ratings', require('./ratings'));
 router.use('/genres', require('./genres'));
+router.use('/comments', require('./comments'));
