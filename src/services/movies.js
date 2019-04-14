@@ -13,5 +13,11 @@ MovieService.create = (title, genre_id, img_url) => {
 };
 
 UserService.read = (id) => {
-    const sql = 
+    const sql = `
+        SELECT *
+        FROM 
+          movies
+        WHERE
+        movies.id = $[id]
+    `;
 }
