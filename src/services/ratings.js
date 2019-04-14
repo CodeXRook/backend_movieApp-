@@ -21,4 +21,6 @@ RatingService.create = ( stars, movie_id) => {
     ($[stars], $[movie_id]);
     RETURNING id
     `;
+    return db.one(sql, {stars, movie_id});
 };
+
