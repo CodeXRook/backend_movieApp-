@@ -23,4 +23,7 @@ ratingRouter.post('/', (req, res, next) => {
     .then(data => {
         res.json(`Success: Rating created with id: ${data.id}`);
     })
+    .catch(err =>{
+        next(err);
+    });
 });
