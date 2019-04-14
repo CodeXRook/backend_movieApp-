@@ -48,5 +48,13 @@ MovieService.delete = (id) => {
       WHERE
       id = $[id]
     `;
-    
+    return db.none(sql, { id });
+};
+
+MovieService.getMovieOrders = (id) => {
+    const sql = `
+      SELECT 
+      orders.*
+      FROM 
+    `;
 };
