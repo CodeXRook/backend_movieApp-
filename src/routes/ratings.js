@@ -48,6 +48,6 @@ ratingRouter.delete('/:id', (req, res, next) =>{
 
     RatingService.delete(id)
     .then(() => {
-
+        res.json("Success: Rating deleted");
     })
 });
