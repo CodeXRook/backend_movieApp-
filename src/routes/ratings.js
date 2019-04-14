@@ -50,4 +50,9 @@ ratingRouter.delete('/:id', (req, res, next) =>{
     .then(() => {
         res.json("Success: Rating deleted");
     })
+    .catch(err => {
+        next(err);
+    });
 });
+
+
