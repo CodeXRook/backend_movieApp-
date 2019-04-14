@@ -46,4 +46,9 @@ movieRouter.get('/:id',(req, res, next) =>{
 moiveRouter.put('/:id', (req, res, next) =>{
   const { id } = req.params;
   const { title, genre_id, img_url} = req.body;
+
+  MovieService.update(id, title, genre_id, img_url)
+  .then(() =>{
+
+  })
 });
