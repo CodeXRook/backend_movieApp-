@@ -24,19 +24,19 @@ DROP DATABASE IF EXISTS movie_app;
  CREATE TABLE comments(
      id SERIAL PRIMARY KEY NOT NULL,
      text VARCHAR NOT NULL,
-     movies_id INT REFERENCES movies(id) NOT NULL
+     movie_id INT REFERENCES movies(id)
  );
 
-INSERT INTO movies(id, title, stars, genres_id, img_url) VALUES
-(34, 'The Matrix', 5,'Action', ' ');
+INSERT INTO movies(id, title, genre_id, img_url) VALUES
+(34, 'The Matrix', 'Action','https://www.youtube.com/watch?v=vKQi3bBA1y8');
 
 INSERT INTO genres(id, name) VALUES
 (12,'Action');
 
-INSERT INTO ratings(id, stars, movies_id) VALUES
+INSERT INTO ratings(id, stars, movie_id) VALUES
 ( 2, 5, 34);
 
-INSERT INTO comments(id, text, movies_id) VALUES
+INSERT INTO comments(id, text, movie_id) VALUES
 ( 5,'BEST MOVIE EVER', 34);
 
 
