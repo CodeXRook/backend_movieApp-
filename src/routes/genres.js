@@ -23,6 +23,9 @@ genreRouter.post('/', (req, res, next) => {
     .then(data =>{
         res,json(`Success: Product created with id: ${data.id}`); 
     })
+    .catch(err =>{
+        next(err);
+    })
 
 });
 
