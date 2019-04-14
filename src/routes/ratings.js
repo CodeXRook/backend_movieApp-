@@ -17,5 +17,5 @@ ratingRouter.get('/:id', (req, res, next)=>{
 
 //CREATE RATING
 ratingRouter.post('/', (req, res, next) => {
-
+    const {stars, movie_id} =res.body;
 })
